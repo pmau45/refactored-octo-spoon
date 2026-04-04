@@ -11,8 +11,8 @@
 
 # Redirect www to non-www (update for actual domain)
 [[redirects]]
-  from = "https://www.axiomcanine.com/*"
-  to = "https://axiomcanine.com/:splat"
+  from = "https://www.axiomcanine.dev/*"
+  to = "https://axiomcanine.dev/:splat"
   status = 301
   force = true
 
