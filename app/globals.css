@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Font Families ─────────────────────────────── */
+/* Loaded via @fontsource packages (imported in layout.tsx) */
+
+/* ─── Base ──────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-black: #050505;
+  --color-dark: #0b0c10;
+  --color-panel: #1a2030;
+  --color-text: #c5c6c7;
+  --color-orange: #ff5e00;
+  --color-olive: #7a8b66;
+  --color-blue: #5b8fa8;
+  --color-cream: #e8d5b7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Scrollbar ─────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-olive);
+  border-radius: 0;
+}
+
+/* ─── Clip Slant ────────────────────────────────── */
+.clip-slant {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+
+/* ─── Background Texture ────────────────────────── */
+.bg-texture {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237A8B66' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ─── Rugged Button ─────────────────────────────── */
+.btn-rugged {
+  position: relative;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-rugged::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 2px solid var(--color-orange);
+  z-index: -1;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-rugged:hover::before,
+.btn-rugged:focus-visible::before {
+  top: 0;
+  left: 0;
+  background-color: var(--color-orange);
+}
+
+.btn-rugged:hover,
+.btn-rugged:focus-visible {
+  color: #050505 !important;
+  outline: none;
+}
+
+/* Variant: trust/blue */
+.btn-rugged-trust::before {
+  border-color: var(--color-blue);
+}
+
+.btn-rugged-trust:hover::before,
+.btn-rugged-trust:focus-visible::before {
+  background-color: var(--color-blue);
+}
+
+.btn-rugged-trust:hover,
+.btn-rugged-trust:focus-visible {
+  color: #050505 !important;
+}
+
+/* ─── Page Transition ───────────────────────────── */
+.page-enter {
+  animation: pageEnter 0.5s ease-out both;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Form Elements ─────────────────────────────── */
+select option {
+  background-color: #0b0c10;
+  color: #c5c6c7;
+}
+
+/* ─── Focus Visible ─────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 2px;
+}
