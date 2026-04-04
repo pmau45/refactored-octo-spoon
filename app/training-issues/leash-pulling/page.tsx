@@ -225,7 +225,7 @@ export default function LeashPullingPage() {
           <div className="mt-6 flex flex-wrap gap-4">
             {[
               { label: 'Reactive Dog', href: '/training-issues/reactive-dog' },
-              { label: 'All Training Issues', href: '/services' },
+              { label: 'All Services', href: '/services' },
             ].map(({ label, href }) => (
               <Link
                 key={href}
