@@ -9,7 +9,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://axiomcanine.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://axiomcanine.dev'),
   title: {
     default: 'Axiom Canine | Professional Dog Training — Jacksonville, FL',
     template: '%s | Axiom Canine',
@@ -69,7 +69,7 @@ const jsonLd = {
   name: 'Axiom Canine',
   description: 'Professional dog training specializing in behavior modification and advanced obedience.',
   telephone: '+19044587561',
-  url: 'https://axiomcanine.com',
+  url: 'https://axiomcanine.dev',
   areaServed: [
     'Jacksonville, FL',
     'Ponte Vedra, FL',

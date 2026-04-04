@@ -82,7 +82,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 4. Select your GitHub repository
 5. Netlify auto-detects `netlify.toml` — build settings are pre-configured
 6. Add environment variables:
-   - `NEXT_PUBLIC_SITE_URL` → your production URL (e.g., `https://axiomcanine.com`)
+   - `NEXT_PUBLIC_SITE_URL` → your production URL (e.g., `https://axiomcanine.dev`)
 7. Click **Deploy**
 
 ### Option 2: Netlify CLI
@@ -135,7 +135,7 @@ Set up in: **Netlify Dashboard → Forms → intake → Form notifications**
 
 | Variable | Description | Default |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Production URL for canonical links and OG tags | `https://axiomcanine.com` |
+| `NEXT_PUBLIC_SITE_URL` | Production URL for canonical links and OG tags | `https://axiomcanine.dev` |
 | `NEXT_TELEMETRY_DISABLED` | Disables Next.js telemetry | `1` |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 ID (optional) | — |
 
