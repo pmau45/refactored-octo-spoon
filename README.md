@@ -1,13 +1,13 @@
 # Axiom Canine — Next.js Website
 
-Professional dog training website for Axiom Canine, Jacksonville, FL. Built with Next.js 14 (App Router), TypeScript, Tailwind CSS, and Netlify Forms.
+Professional dog training website for Axiom Canine, Jacksonville, FL. Built with Next.js 15 (App Router), TypeScript, Tailwind CSS, and Netlify Forms.
 
 ## Tech Stack
 
-- **Framework:** Next.js 14 (App Router)
+- **Framework:** Next.js 15 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS + CSS Modules (`app/globals.css`)
-- **Fonts:** Google Fonts via `next/font` (Oswald + Chivo)
+- **Fonts:** Oswald & Chivo via `@fontsource` packages (self-hosted, no Google Fonts fetch at build time)
 - **Forms:** Netlify Forms (no backend required)
 - **Hosting:** Netlify
 

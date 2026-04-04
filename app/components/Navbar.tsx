@@ -49,16 +49,18 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
         <nav className="hidden md:flex gap-8 items-center mt-1" aria-label="Main navigation">
           {navLinks.map(({ href, label, accent }) => {
             const active = isActive(href);
-            const activeColor = accent === 'blue' ? '[#5B8FA8]' : '[#FF5E00]';
-            const hoverColor = accent === 'blue' ? 'hover:text-[#5B8FA8] hover:border-[#5B8FA8]' : 'hover:text-[#FF5E00] hover:border-[#FF5E00]';
             return (
               <Link
                 key={href}
                 href={href}
                 className={`text-sm font-bold uppercase tracking-widest pb-1 transition-colors border-b-2 ${
-                  active
-                    ? `text-${activeColor} border-${activeColor}`
-                    : `text-[#C5C6C7] border-transparent ${hoverColor}`
+                  accent === 'blue'
+                    ? active
+                      ? 'text-[#5B8FA8] border-[#5B8FA8]'
+                      : 'text-[#C5C6C7] border-transparent hover:text-[#5B8FA8] hover:border-[#5B8FA8]'
+                    : active
+                      ? 'text-[#FF5E00] border-[#FF5E00]'
+                      : 'text-[#C5C6C7] border-transparent hover:text-[#FF5E00] hover:border-[#FF5E00]'
                 }`}
                 aria-current={active ? 'page' : undefined}
               >
