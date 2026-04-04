@@ -17,9 +17,9 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/behavior', label: 'Behavior Mod' },
-    { href: '/obedience', label: 'Obedience' },
+    { href: '/services', label: 'Services' },
     { href: '/community', label: 'Axiom Cares', accent: 'blue' as const },
+    { href: '/contact', label: 'Contact' },
   ];
 
   const isActive = (href: string) => {

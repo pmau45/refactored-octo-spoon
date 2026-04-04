@@ -9,12 +9,47 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Redirect www to non-www (update for actual domain)
+# Force HTTPS — redirect http to https (non-www)
+[[redirects]]
+  from = "http://axiomcanine.dev/*"
+  to = "https://axiomcanine.dev/:splat"
+  status = 301
+  force = true
+
+# Force HTTPS — redirect http www to https non-www
+[[redirects]]
+  from = "http://www.axiomcanine.dev/*"
+  to = "https://axiomcanine.dev/:splat"
+  status = 301
+  force = true
+
+# Redirect www to non-www (https)
 [[redirects]]
   from = "https://www.axiomcanine.dev/*"
   to = "https://axiomcanine.dev/:splat"
   status = 301
   force = true
+
+# Legacy route redirects (301 — preserve SEO equity)
+[[redirects]]
+  from = "/behavior"
+  to = "/services/behavior-modification"
+  status = 301
+
+[[redirects]]
+  from = "/behavior/*"
+  to = "/services/behavior-modification"
+  status = 301
+
+[[redirects]]
+  from = "/obedience"
+  to = "/services/advanced-obedience"
+  status = 301
+
+[[redirects]]
+  from = "/obedience/*"
+  to = "/services/advanced-obedience"
+  status = 301
 
 # Cache static assets
 [[headers]]

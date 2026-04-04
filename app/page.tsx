@@ -161,13 +161,14 @@ export default function HomePage() {
               Our Services
             </h2>
             <p className="text-[#C5C6C7] text-lg leading-relaxed">
-              Every dog is different. Every problem has a root. We offer two focused programs
-              designed to address what&apos;s actually going on.
+              Every dog is different. Every problem has a root. We offer three programs
+              designed to address what&apos;s actually going on — matched to the dog, the
+              behavior, and your lifestyle.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Link
-              href="/behavior"
+              href="/services/behavior-modification"
               className="group bg-[#1A2030] border border-[#1A2030] hover:border-[#FF5E00] transition-colors duration-300 p-10 flex flex-col shadow-lg"
               aria-label="Learn more about Behavior Modification"
             >
@@ -186,7 +187,7 @@ export default function HomePage() {
               </span>
             </Link>
             <Link
-              href="/obedience"
+              href="/services/advanced-obedience"
               className="group bg-[#1A2030] border border-[#1A2030] hover:border-[#7A8B66] transition-colors duration-300 p-10 flex flex-col shadow-lg"
               aria-label="Learn more about Advanced Obedience"
             >
@@ -203,6 +204,14 @@ export default function HomePage() {
               <span className="font-oswald text-sm uppercase tracking-widest text-[#7A8B66] border-b border-[#7A8B66] pb-1 self-start group-hover:text-white group-hover:border-white transition-colors">
                 Learn More →
               </span>
+            </Link>
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              href="/services"
+              className="font-oswald text-lg font-bold uppercase tracking-widest px-8 py-4 inline-flex items-center gap-3 border border-[#1A2030] text-[#C5C6C7] hover:border-[#FF5E00] hover:text-white transition-colors"
+            >
+              View All Services &amp; Programs
             </Link>
           </div>
         </div>
