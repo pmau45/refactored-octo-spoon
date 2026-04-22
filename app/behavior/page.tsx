@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import { AlertTriangle, ArrowRight } from 'lucide-react';
 import OpenModalButton from '../components/OpenModalButton';
+import { StaggerContainer, StaggerItem } from '../components/StaggerContainer';
 
 export const metadata: Metadata = {
   title: 'Behavior Modification',
   description:
-    'Reactivity, aggression, and resource guarding don\'t fix themselves. Axiom Canine specializes in rehabilitating the dogs other trainers turn away in Jacksonville, FL.',
+    'Jacksonville, FL behavior modification for reactive, aggressive & resource-guarding dogs. Axiom Canine rehabilitates the dogs other trainers turn away — any breed, any age.',
   alternates: {
     canonical: '/behavior',
   },
@@ -54,26 +55,30 @@ export default function BehaviorPage() {
               won&apos;t work. We must address their state of mind and structural boundaries.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-[#1A2030] p-10 border-l-4 border-[#FF5E00] shadow-lg">
-              <h3 className="font-oswald text-2xl uppercase tracking-widest text-white mb-4">
-                Leash Reactivity
-              </h3>
-              <p className="text-[#C5C6C7] leading-relaxed">
-                Lunging, barking, and hyper-fixation on walks are signs of insecurity and a lack of
-                leadership. We establish a structured walk where you are in control.
-              </p>
-            </div>
-            <div className="bg-[#1A2030] p-10 border-l-4 border-[#FF5E00] shadow-lg">
-              <h3 className="font-oswald text-2xl uppercase tracking-widest text-white mb-4">
-                Resource Guarding
-              </h3>
-              <p className="text-[#C5C6C7] leading-relaxed">
-                Protecting food, space, or owners is a dangerous liability. We implement strict,
-                fair routines that safely reset the dynamic.
-              </p>
-            </div>
-          </div>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <StaggerItem>
+              <div className="bg-[#1A2030] p-10 border-l-4 border-[#FF5E00] shadow-lg h-full">
+                <h3 className="font-oswald text-2xl uppercase tracking-widest text-white mb-4">
+                  Leash Reactivity
+                </h3>
+                <p className="text-[#C5C6C7] leading-relaxed">
+                  Lunging, barking, and hyper-fixation on walks are signs of insecurity and a lack of
+                  leadership. We establish a structured walk where you are in control.
+                </p>
+              </div>
+            </StaggerItem>
+            <StaggerItem>
+              <div className="bg-[#1A2030] p-10 border-l-4 border-[#FF5E00] shadow-lg h-full">
+                <h3 className="font-oswald text-2xl uppercase tracking-widest text-white mb-4">
+                  Resource Guarding
+                </h3>
+                <p className="text-[#C5C6C7] leading-relaxed">
+                  Protecting food, space, or owners is a dangerous liability. We implement strict,
+                  fair routines that safely reset the dynamic.
+                </p>
+              </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
 
