@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import { Heart, Shield, ArrowRight } from 'lucide-react';
 import OpenModalButton from '../components/OpenModalButton';
+import { StaggerContainer, StaggerItem } from '../components/StaggerContainer';
 
 export const metadata: Metadata = {
   title: 'Axiom Cares — Free Rescue & Adoption Support',
   description:
-    'No dog should lose their home. Axiom Cares offers free in-home visits for rescue and adoption adjustments in Jacksonville, FL. No judgment, no pressure, no bill.',
+    'Free rescue & adoption adjustment visits in Jacksonville, FL. Axiom Cares helps newly adopted dogs settle in safely — no judgment, no pressure, no bill.',
   alternates: {
     canonical: '/community',
   },
@@ -44,34 +45,38 @@ export default function CommunityPage() {
           <h2 id="programs-heading" className="sr-only">
             Axiom Cares Programs
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            <div className="bg-[#1A2030] p-10 border-t-4 border-[#5B8FA8] shadow-lg">
-              <Heart className="w-12 h-12 text-[#5B8FA8] mb-6" aria-hidden="true" />
-              <h3 className="font-oswald text-2xl uppercase tracking-widest text-white mb-4">
-                Rescue Ready
-              </h3>
-              <p className="text-[#C5C6C7] leading-relaxed mb-6">
-                If you&apos;re adopting or have recently rescued a dog, we&apos;ll come to you.
-                Free. No strings attached.
-              </p>
-              <p className="text-[#E8D5B7] text-sm font-bold uppercase tracking-widest">
-                Free In-Home Visit · Jacksonville Area
-              </p>
-            </div>
-            <div className="bg-[#1A2030] p-10 border-t-4 border-[#FF5E00] shadow-lg">
-              <Shield className="w-12 h-12 text-[#FF5E00] mb-6" aria-hidden="true" />
-              <h3 className="font-oswald text-2xl uppercase tracking-widest text-white mb-4">
-                Before You Let Go
-              </h3>
-              <p className="text-[#C5C6C7] leading-relaxed mb-6">
-                If you&apos;re considering rehoming or surrendering, reach out. We&apos;ll give you
-                a real, honest plan — at our expense.
-              </p>
-              <p className="text-[#E8D5B7] text-sm font-bold uppercase tracking-widest">
-                Free Assessment · All Options On The Table
-              </p>
-            </div>
-          </div>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <StaggerItem>
+              <div className="bg-[#1A2030] p-10 border-t-4 border-[#5B8FA8] shadow-lg h-full">
+                <Heart className="w-12 h-12 text-[#5B8FA8] mb-6" aria-hidden="true" />
+                <h3 className="font-oswald text-2xl uppercase tracking-widest text-white mb-4">
+                  Rescue Ready
+                </h3>
+                <p className="text-[#C5C6C7] leading-relaxed mb-6">
+                  If you&apos;re adopting or have recently rescued a dog, we&apos;ll come to you.
+                  Free. No strings attached.
+                </p>
+                <p className="text-[#E8D5B7] text-sm font-bold uppercase tracking-widest">
+                  Free In-Home Visit · Jacksonville Area
+                </p>
+              </div>
+            </StaggerItem>
+            <StaggerItem>
+              <div className="bg-[#1A2030] p-10 border-t-4 border-[#FF5E00] shadow-lg h-full">
+                <Shield className="w-12 h-12 text-[#FF5E00] mb-6" aria-hidden="true" />
+                <h3 className="font-oswald text-2xl uppercase tracking-widest text-white mb-4">
+                  Before You Let Go
+                </h3>
+                <p className="text-[#C5C6C7] leading-relaxed mb-6">
+                  If you&apos;re considering rehoming or surrendering, reach out. We&apos;ll give you
+                  a real, honest plan — at our expense.
+                </p>
+                <p className="text-[#E8D5B7] text-sm font-bold uppercase tracking-widest">
+                  Free Assessment · All Options On The Table
+                </p>
+              </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
 

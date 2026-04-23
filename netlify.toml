@@ -51,6 +51,13 @@
   to = "/services/advanced-obedience"
   status = 301
 
+# Sitemap — ensure correct MIME type and reasonable caching for crawlers
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
 # Cache static assets
 [[headers]]
   for = "/_next/static/*"
