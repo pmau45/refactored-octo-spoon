@@ -12,9 +12,39 @@ export const metadata: Metadata = {
   },
 };
 
+const obedienceServiceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Advanced Dog Obedience Training',
+  description:
+    'Off-leash reliability, bulletproof recall, and public neutrality training',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Axiom Canine',
+  },
+  areaServed: [
+    {
+      '@type': 'City',
+      name: 'Jacksonville',
+      state: 'FL',
+    },
+  ],
+  serviceType: 'Dog Training',
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'USD',
+    price: 'Contact for quote',
+    availability: 'https://schema.org/InStock',
+  },
+};
+
 export default function ObediencePage() {
   return (
     <div className="page-enter">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(obedienceServiceJsonLd) }}
+      />
       {/* ── Hero ──────────────────────────────────────── */}
       <section
         className="relative min-h-[70vh] flex items-center justify-center pt-20 clip-slant pb-24 overflow-hidden bg-gradient-to-bl from-[#7A8B66]/10 via-[#050505] to-[#050505]"

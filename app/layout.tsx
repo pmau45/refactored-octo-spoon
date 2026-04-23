@@ -81,8 +81,23 @@ const jsonLd = {
     '@type': 'PostalAddress',
     addressLocality: 'Jacksonville',
     addressRegion: 'FL',
+    postalCode: '32244',
     addressCountry: 'US',
   },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '17:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday'],
+      opens: '09:00',
+      closes: '14:00',
+    },
+  ],
   areaServed: [
     { '@type': 'City', name: 'Jacksonville', containedInPlace: { '@type': 'State', name: 'Florida' } },
     { '@type': 'City', name: 'Ponte Vedra Beach', containedInPlace: { '@type': 'State', name: 'Florida' } },

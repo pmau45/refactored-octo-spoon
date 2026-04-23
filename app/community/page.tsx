@@ -12,9 +12,39 @@ export const metadata: Metadata = {
   },
 };
 
+const communityServiceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Axiom Cares - Free Rescue & Adoption Support',
+  description:
+    'Free in-home visits for rescue and adoption adjustments. No judgment, no pressure, no bill.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Axiom Canine',
+  },
+  areaServed: [
+    {
+      '@type': 'City',
+      name: 'Jacksonville',
+      state: 'FL',
+    },
+  ],
+  serviceType: 'Community Support',
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'USD',
+    price: 'Free',
+    availability: 'https://schema.org/InStock',
+  },
+};
+
 export default function CommunityPage() {
   return (
     <div className="page-enter">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(communityServiceJsonLd) }}
+      />
       {/* ── Hero ──────────────────────────────────────── */}
       <section
         className="relative min-h-[70vh] flex items-center justify-center pt-20 clip-slant pb-24 overflow-hidden bg-gradient-to-br from-[#5B8FA8]/10 via-[#050505] to-[#050505]"

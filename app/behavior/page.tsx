@@ -12,9 +12,39 @@ export const metadata: Metadata = {
   },
 };
 
+const behaviorServiceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Dog Behavior Modification Training',
+  description:
+    'Professional behavior modification for reactive, aggressive, and resource guarding dogs',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Axiom Canine',
+  },
+  areaServed: [
+    {
+      '@type': 'City',
+      name: 'Jacksonville',
+      state: 'FL',
+    },
+  ],
+  serviceType: 'Dog Training',
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'USD',
+    price: 'Contact for quote',
+    availability: 'https://schema.org/InStock',
+  },
+};
+
 export default function BehaviorPage() {
   return (
     <div className="page-enter">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(behaviorServiceJsonLd) }}
+      />
       {/* ── Hero ──────────────────────────────────────── */}
       <section
         className="relative min-h-[70vh] flex items-center justify-center pt-20 clip-slant pb-24 overflow-hidden bg-gradient-to-br from-[#FF5E00]/10 via-[#050505] to-[#050505]"
