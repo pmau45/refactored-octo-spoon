@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import { MapPin, Radio, Anchor, ArrowRight } from 'lucide-react';
 import OpenModalButton from '../components/OpenModalButton';
+import { StaggerContainer, StaggerItem } from '../components/StaggerContainer';
 
 export const metadata: Metadata = {
   title: 'Advanced Obedience',
   description:
-    'Build bulletproof recall, public neutrality, and off-leash reliability. Axiom Canine\'s advanced obedience training in Jacksonville, FL produces real-world results.',
+    'Off-leash obedience training in Jacksonville, FL. Axiom Canine builds bulletproof recall, public neutrality & real-world reliability — commands that hold up anywhere.',
   alternates: {
     canonical: '/obedience',
   },
@@ -45,7 +46,7 @@ export default function ObediencePage() {
           <h2 id="skills-heading" className="sr-only">
             Obedience Skills We Develop
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {[
               {
                 Icon: MapPin,
@@ -63,18 +64,19 @@ export default function ObediencePage() {
                 body: 'Holding a designated boundary (a bed or cot) for extended periods until released.',
               },
             ].map(({ Icon, title, body }) => (
-              <div
-                key={title}
-                className="bg-[#050505] p-8 border border-[#1A2030] text-center"
-              >
-                <Icon className="w-10 h-10 text-[#7A8B66] mx-auto mb-4" aria-hidden="true" />
-                <h3 className="font-oswald text-xl uppercase tracking-widest text-white mb-2">
-                  {title}
-                </h3>
-                <p className="text-[#C5C6C7] text-sm">{body}</p>
-              </div>
+              <StaggerItem key={title}>
+                <div
+                  className="bg-[#050505] p-8 border border-[#1A2030] text-center h-full"
+                >
+                  <Icon className="w-10 h-10 text-[#7A8B66] mx-auto mb-4" aria-hidden="true" />
+                  <h3 className="font-oswald text-xl uppercase tracking-widest text-white mb-2">
+                    {title}
+                  </h3>
+                  <p className="text-[#C5C6C7] text-sm">{body}</p>
+                </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 

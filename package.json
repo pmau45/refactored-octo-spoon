@@ -11,10 +11,12 @@
   "dependencies": {
     "@fontsource/chivo": "^5.2.8",
     "@fontsource/oswald": "^5.2.8",
+    "framer-motion": "^12.38.0",
     "lucide-react": "0.400.0",
     "next": "15.5.14",
     "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react-dom": "19.0.0",
+    "react-intersection-observer": "^10.0.3"
   },
   "devDependencies": {
     "@types/node": "20.14.10",

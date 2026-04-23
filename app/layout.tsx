@@ -15,16 +15,20 @@ export const metadata: Metadata = {
     template: '%s | Axiom Canine',
   },
   description:
-    'Axiom Canine provides professional dog training in Jacksonville, FL. Specializing in behavior modification, advanced obedience, and rescue adjustment. Structure. Consistency. Results.',
+    'Axiom Canine — professional dog training in Jacksonville, FL. Behavior modification, off-leash obedience & free rescue support. Serving Ponte Vedra, Nocatee & St. Augustine.',
   keywords: [
     'dog training Jacksonville FL',
-    'behavior modification dog',
-    'advanced obedience training',
-    'dog trainer Jacksonville',
+    'behavior modification dog Jacksonville',
+    'advanced obedience training Jacksonville',
+    'dog trainer Jacksonville FL',
     'Ponte Vedra dog training',
     'Nocatee dog training',
-    'reactive dog training',
-    'off-leash obedience',
+    'St. Augustine dog trainer',
+    'reactive dog training Jacksonville',
+    'off-leash obedience Jacksonville',
+    'aggressive dog training Jacksonville',
+    'rescue dog training Jacksonville',
+    'puppy training Jacksonville FL',
   ],
   openGraph: {
     type: 'website',
@@ -66,19 +70,64 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  '@id': 'https://axiomcanine.dev',
   name: 'Axiom Canine',
-  description: 'Professional dog training specializing in behavior modification and advanced obedience.',
+  description:
+    'Professional dog training in Jacksonville, FL specializing in behavior modification, advanced obedience, and free rescue adjustment support.',
   telephone: '+19044587561',
   url: 'https://axiomcanine.dev',
+  image: 'https://axiomcanine.dev/og-image.png',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Jacksonville',
+    addressRegion: 'FL',
+    addressCountry: 'US',
+  },
   areaServed: [
-    'Jacksonville, FL',
-    'Ponte Vedra, FL',
-    'Nocatee, FL',
-    'St. Augustine, FL',
-    'Nassau County, FL',
+    { '@type': 'City', name: 'Jacksonville', containedInPlace: { '@type': 'State', name: 'Florida' } },
+    { '@type': 'City', name: 'Ponte Vedra Beach', containedInPlace: { '@type': 'State', name: 'Florida' } },
+    { '@type': 'City', name: 'Nocatee', containedInPlace: { '@type': 'State', name: 'Florida' } },
+    { '@type': 'City', name: 'St. Augustine', containedInPlace: { '@type': 'State', name: 'Florida' } },
+    { '@type': 'County', name: 'Nassau County', containedInPlace: { '@type': 'State', name: 'Florida' } },
   ],
   priceRange: '$$',
-  serviceType: ['Dog Training', 'Behavior Modification', 'Obedience Training'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Dog Training Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Behavior Modification',
+          description:
+            'Rehabilitation for reactivity, aggression, and resource guarding. We address the root cause of dangerous behaviors in Jacksonville, FL dogs.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Advanced Obedience Training',
+          description:
+            'Build bulletproof recall, off-leash reliability, and public neutrality for dogs in Jacksonville, FL and surrounding areas.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Axiom Cares — Free Rescue & Adoption Support',
+          description:
+            'Free in-home visits for rescue and adoption adjustment in Jacksonville, FL. No judgment, no pressure, no bill.',
+        },
+      },
+    ],
+  },
+  sameAs: [
+    'https://www.facebook.com/axiomcanine',
+    'https://www.instagram.com/axiomcanine',
+  ],
 };
 
 export default function RootLayout({
