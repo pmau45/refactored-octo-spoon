@@ -11,6 +11,7 @@ interface IntakeModalProps {
 interface FormValues {
   name: string;
   phone: string;
+  dog_name: string;
   service: string;
   message: string;
   'bot-field': string; // honeypot
@@ -62,6 +63,7 @@ export default function IntakeModal({ isOpen, onClose }: IntakeModalProps) {
   const [values, setValues] = useState<FormValues>({
     name: '',
     phone: '',
+    dog_name: '',
     service: '',
     message: '',
     'bot-field': '',
@@ -107,7 +109,7 @@ export default function IntakeModal({ isOpen, onClose }: IntakeModalProps) {
     setErrors({});
     setTouched({});
     setSubmitError('');
-    setValues({ name: '', phone: '', service: '', message: '', 'bot-field': '' });
+    setValues({ name: '', phone: '', dog_name: '', service: '', message: '', 'bot-field': '' });
     onClose();
   };
 
@@ -160,6 +162,7 @@ export default function IntakeModal({ isOpen, onClose }: IntakeModalProps) {
           'form-name': 'intake',
           name: values.name,
           phone: values.phone,
+          dog_name: values.dog_name,
           service: values.service,
           message: values.message,
           'bot-field': values['bot-field'],
@@ -331,6 +334,29 @@ export default function IntakeModal({ isOpen, onClose }: IntakeModalProps) {
                         {errors.phone}
                       </p>
                     )}
+                  </div>
+
+                  {/* Dog's Name (optional) */}
+                  <div className="col-span-1 md:col-span-2 space-y-2">
+                    <label
+                      htmlFor="intake-dog-name"
+                      className="font-oswald uppercase text-sm tracking-widest text-[#C5C6C7] block"
+                    >
+                      Dog&apos;s Name{' '}
+                      <span className="text-[#C5C6C7]/40 text-xs normal-case tracking-normal">
+                        (optional)
+                      </span>
+                    </label>
+                    <input
+                      id="intake-dog-name"
+                      type="text"
+                      name="dog_name"
+                      value={values.dog_name}
+                      onChange={handleChange}
+                      className="w-full bg-[#0B0C10] border border-[#1A2030] px-5 py-4 text-white focus:outline-none focus:ring-1 focus:border-[#FF5E00] focus:ring-[#FF5E00] transition-colors"
+                      placeholder="e.g. Zeus, Bella..."
+                      autoComplete="off"
+                    />
                   </div>
                 </div>
 
