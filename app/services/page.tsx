@@ -151,6 +151,109 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* ── Our Training Programs ─────────────────────── */}
+      <section
+        className="py-24 bg-[#050505] border-b border-[#1A2030]"
+        aria-labelledby="training-programs-heading"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2
+              id="training-programs-heading"
+              className="font-oswald text-4xl font-bold uppercase tracking-widest text-[#7A8B66] mb-4"
+            >
+              Our Training Programs
+            </h2>
+            <p className="text-[#C5C6C7] text-lg leading-relaxed">
+              All programs are fully customized after a free initial assessment of your dog&apos;s
+              specific behaviors, temperament, and your goals&nbsp;&amp;&nbsp;lifestyle.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Delivery Options */}
+            <div className="bg-[#0B0C10] border border-[#1A2030] p-10">
+              <h3 className="font-oswald text-2xl uppercase tracking-widest text-white mb-6">
+                Delivery Options
+              </h3>
+              <ul className="space-y-6">
+                <li className="flex items-start gap-3">
+                  <ArrowRight className="w-4 h-4 mt-1 flex-shrink-0 text-[#FF5E00]" aria-hidden="true" />
+                  <div>
+                    <p className="font-oswald text-lg uppercase tracking-widest text-white mb-1">
+                      In-Home Training
+                    </p>
+                    <p className="text-[#C5C6C7] text-sm leading-relaxed">
+                      Private sessions in your home and real-world environments with hands-on owner coaching.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <ArrowRight className="w-4 h-4 mt-1 flex-shrink-0 text-[#FF5E00]" aria-hidden="true" />
+                  <div>
+                    <p className="font-oswald text-lg uppercase tracking-widest text-white mb-1">
+                      Board &amp; Train
+                    </p>
+                    <p className="text-[#C5C6C7] text-sm leading-relaxed">
+                      Immersive residential program where your dog stays with us for intensive daily work
+                      (ideal for severe issues or faster progress).
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <ArrowRight className="w-4 h-4 mt-1 flex-shrink-0 text-[#FF5E00]" aria-hidden="true" />
+                  <div>
+                    <p className="font-oswald text-lg uppercase tracking-widest text-white mb-1">
+                      Group Classes
+                    </p>
+                    <p className="text-[#C5C6C7] text-sm leading-relaxed">
+                      Structured small-group sessions for socialization and skill-building.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            {/* Core Programs */}
+            <div className="bg-[#0B0C10] border border-[#1A2030] p-10">
+              <h3 className="font-oswald text-2xl uppercase tracking-widest text-white mb-6">
+                Core Programs
+              </h3>
+              <ul className="space-y-6">
+                <li className="flex items-start gap-3">
+                  <ArrowRight className="w-4 h-4 mt-1 flex-shrink-0 text-[#FF5E00]" aria-hidden="true" />
+                  <div>
+                    <p className="font-oswald text-lg uppercase tracking-widest text-white mb-1">
+                      Behavior Modification
+                    </p>
+                    <p className="text-[#C5C6C7] text-sm leading-relaxed">
+                      Root-cause rehabilitation for reactivity, aggression, fear, resource guarding,
+                      and other challenging issues.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <ArrowRight className="w-4 h-4 mt-1 flex-shrink-0 text-[#FF5E00]" aria-hidden="true" />
+                  <div>
+                    <p className="font-oswald text-lg uppercase tracking-widest text-white mb-1">
+                      Advanced Obedience
+                    </p>
+                    <p className="text-[#C5C6C7] text-sm leading-relaxed">
+                      Real-world reliability including bulletproof recall, off-leash control,
+                      public neutrality, and place command.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-10 text-center text-[#C5C6C7] text-lg leading-relaxed">
+            No one-size-fits-all packages — every plan is tailored to your dog.{' '}
+            <span className="text-[#FF5E00] font-semibold">
+              Start with an assessment to get the right recommendation.
+            </span>
+          </p>
+        </div>
+      </section>
+
       {/* ── Training Issues ───────────────────────────── */}
       <section
         className="py-24 bg-[#050505] border-b border-[#1A2030]"
