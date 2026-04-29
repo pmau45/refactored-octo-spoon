@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  ShieldCheck,
   ArrowRight,
   Quote,
   LayoutTemplate,
@@ -11,7 +10,6 @@ import {
   Compass,
 } from 'lucide-react';
 import OpenModalButton from './components/OpenModalButton';
-import AnimatedSection from './components/AnimatedSection';
 import { StaggerContainer, StaggerItem } from './components/StaggerContainer';
 
 export const metadata: Metadata = {
