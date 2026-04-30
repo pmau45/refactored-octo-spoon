@@ -1,3 +1,16 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/display-name": "warn",
+    "@next/next/no-html-link-for-pages": "error",
+    "no-console": [
+      "warn",
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "prefer-const": "warn",
+    "no-var": "error"
+  }
 }
