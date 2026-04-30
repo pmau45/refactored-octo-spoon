@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { MapPin, Radio, Anchor, ArrowRight } from 'lucide-react';
-import OpenModalButton from '../components/OpenModalButton';
-import { StaggerContainer, StaggerItem } from '../components/StaggerContainer';
+import OpenModalButton from '../components/forms/OpenModalButton';
+import { StaggerContainer, StaggerItem } from '../components/animations/StaggerContainer';
 
 export const metadata: Metadata = {
   title: 'Advanced Obedience',

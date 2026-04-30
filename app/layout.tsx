@@ -4,8 +4,8 @@ import '@fontsource/oswald/700.css';
 import '@fontsource/chivo/300.css';
 import '@fontsource/chivo/400.css';
 import '@fontsource/chivo/700.css';
-import SiteLayout from './components/SiteLayout';
-import ErrorBoundary from './components/ErrorBoundary';
+import SiteLayout from './components/layout/SiteLayout';
+import ErrorBoundary from './components/ui/ErrorBoundary';
 import './globals.css';
 
 export const metadata: Metadata = {

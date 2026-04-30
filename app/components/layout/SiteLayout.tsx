@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import IntakeModal from './IntakeModal';
+import IntakeModal from '../forms/IntakeModal';
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   const [isModalOpen, setIsModalOpen] = useState(false);

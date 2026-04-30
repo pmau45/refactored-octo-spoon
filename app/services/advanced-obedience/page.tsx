@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Compass, ArrowRight, CheckCircle2, MapPin, Radio, Anchor } from 'lucide-react';
-import OpenModalButton from '../../components/OpenModalButton';
+import OpenModalButton from '../../components/forms/OpenModalButton';
 
 export const metadata: Metadata = {
   title: 'Advanced Obedience Dog Training Jacksonville, FL',

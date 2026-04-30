@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ShieldCheck, ArrowRight, AlertTriangle, CheckCircle2 } from 'lucide-react';
-import OpenModalButton from '../../components/OpenModalButton';
+import OpenModalButton from '../../components/forms/OpenModalButton';
 
 export const metadata: Metadata = {
   title: 'Dog Aggression Training Jacksonville, FL | Safety-First Approach',

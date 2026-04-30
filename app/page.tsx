@@ -9,8 +9,8 @@ import {
   AlertTriangle,
   Compass,
 } from 'lucide-react';
-import OpenModalButton from './components/OpenModalButton';
-import { StaggerContainer, StaggerItem } from './components/StaggerContainer';
+import OpenModalButton from './components/forms/OpenModalButton';
+import { StaggerContainer, StaggerItem } from './components/animations/StaggerContainer';
 
 export const metadata: Metadata = {
   title: 'Axiom Canine | Professional Dog Training — Jacksonville, FL',

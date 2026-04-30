@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Phone, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import OpenModalButton from '../components/OpenModalButton';
+import OpenModalButton from '../components/forms/OpenModalButton';
 
 export const metadata: Metadata = {
   title: 'Contact Axiom Canine | Dog Training Jacksonville, FL',
