@@ -3,21 +3,53 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ShieldCheck, Phone, Menu, X } from 'lucide-react';
+import { ShieldCheck, Phone, Menu, X, ChevronDown } from 'lucide-react';
 
 interface NavbarProps {
   onOpenModal: () => void;
 }
 
+interface NavLink {
+  href?: string;
+  label: string;
+  submenu?: NavLink[];
+  accent?: 'blue';
+}
+
 export default function Navbar({ onOpenModal }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const pathname = usePathname();
 
   const closeMenu = () => setIsOpen(false);
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/services', label: 'Services' },
+    {
+      label: 'Training',
+      submenu: [
+        { href: '/services', label: 'All Services' },
+        { href: '/behavior', label: 'Behavior Modification' },
+        { href: '/obedience', label: 'Advanced Obedience' },
+        { href: '/philosophy', label: 'Our Philosophy' },
+      ],
+    },
+    {
+      label: 'Issues',
+      submenu: [
+        { href: '/training-issues/aggression', label: 'Aggression' },
+        { href: '/training-issues/reactive-dog', label: 'Reactive Dogs' },
+        { href: '/training-issues/leash-pulling', label: 'Leash Pulling' },
+      ],
+    },
+    {
+      label: 'Areas',
+      submenu: [
+        { href: '/ponte-vedra', label: 'Ponte Vedra' },
+        { href: '/nocatee', label: 'Nocatee' },
+        { href: '/st-augustine', label: 'St. Augustine' },
+      ],
+    },
     { href: '/community', label: 'Axiom Cares', accent: 'blue' as const },
     { href: '/contact', label: 'Contact' },
   ];
@@ -46,14 +78,47 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-8 items-center mt-1" aria-label="Main navigation">
-          {navLinks.map(({ href, label, accent }) => {
-            const active = isActive(href);
+        <nav className="hidden md:flex gap-1 items-center mt-1" aria-label="Main navigation">
+          {navLinks.map(({ href, label, accent, submenu }) => {
+            const active = href ? isActive(href) : false;
+            if (submenu) {
+              return (
+                <div key={label} className="relative group">
+                  <button className={`text-sm font-bold uppercase tracking-widest pb-1 px-2 py-2 transition-colors border-b-2 flex items-center gap-1 ${
+                    accent === 'blue'
+                      ? active
+                        ? 'text-[#5B8FA8] border-[#5B8FA8]'
+                        : 'text-[#C5C6C7] border-transparent group-hover:text-[#5B8FA8] group-hover:border-[#5B8FA8]'
+                      : active
+                        ? 'text-[#FF5E00] border-[#FF5E00]'
+                        : 'text-[#C5C6C7] border-transparent group-hover:text-[#FF5E00] group-hover:border-[#FF5E00]'
+                  }`}>
+                    {label}
+                    <ChevronDown className="w-3 h-3" aria-hidden="true" />
+                  </button>
+                  <div className="absolute left-0 hidden group-hover:block bg-[#0B0C10] border border-[#FF5E00] rounded-lg shadow-2xl mt-0 min-w-56 z-50">
+                    {submenu.map(({ href: subHref, label: subLabel }) => (
+                      <Link
+                        key={subHref}
+                        href={subHref!}
+                        className={`block px-4 py-3 text-sm font-semibold tracking-wide transition-colors first:rounded-t-lg last:rounded-b-lg ${
+                          pathname === subHref
+                            ? 'text-[#FF5E00] bg-[#1A2030]'
+                            : 'text-[#C5C6C7] hover:text-[#FF5E00] hover:bg-[#1A2030]'
+                        }`}
+                      >
+                        {subLabel}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
             return (
               <Link
                 key={href}
                 href={href}
-                className={`text-sm font-bold uppercase tracking-widest pb-1 transition-colors border-b-2 ${
+                className={`text-sm font-bold uppercase tracking-widest pb-1 px-2 py-2 transition-colors border-b-2 ${
                   accent === 'blue'
                     ? active
                       ? 'text-[#5B8FA8] border-[#5B8FA8]'
@@ -110,11 +175,48 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
           role="navigation"
           aria-label="Mobile navigation"
         >
-          {navLinks.map(({ href, label, accent }) => {
-            const active = isActive(href);
+          {navLinks.map(({ href, label, accent, submenu }) => {
+            const active = href ? isActive(href) : false;
             const accentClass = accent === 'blue'
               ? active ? 'text-[#5B8FA8] bg-[#1A2030] border-l-[#5B8FA8]' : 'border-l-transparent'
               : active ? 'text-[#FF5E00] bg-[#1A2030] border-l-[#FF5E00]' : 'border-l-transparent';
+
+            if (submenu) {
+              const isOpen = openSubmenu === label;
+              return (
+                <div key={label}>
+                  <button
+                    onClick={() => setOpenSubmenu(isOpen ? null : label)}
+                    className={`w-full p-5 text-center font-oswald text-xl uppercase tracking-widest border-b border-[#050505] transition-colors text-[#C5C6C7] border-l-4 flex items-center justify-between ${
+                      accentClass
+                    }`}
+                    aria-expanded={isOpen}
+                  >
+                    {label}
+                    <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {isOpen && (
+                    <div className="bg-[#050505]">
+                      {submenu.map(({ href: subHref, label: subLabel }) => (
+                        <Link
+                          key={subHref}
+                          href={subHref}
+                          onClick={closeMenu}
+                          className={`block p-5 pl-8 text-left font-oswald uppercase tracking-widest border-b border-[#1A2030] transition-colors ${
+                            pathname === subHref
+                              ? 'text-[#FF5E00] bg-[#1A2030]'
+                              : 'text-[#C5C6C7] hover:text-[#FF5E00] hover:bg-[#1A2030]'
+                          }`}
+                        >
+                          {subLabel}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
             return (
               <Link
                 key={href}
