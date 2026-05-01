@@ -11,10 +11,12 @@
   "dependencies": {
     "@fontsource/chivo": "^5.2.8",
     "@fontsource/oswald": "^5.2.8",
+    "chart.js": "^4.5.1",
     "framer-motion": "^12.38.0",
     "lucide-react": "0.400.0",
     "next": "15.5.14",
     "react": "19.0.0",
+    "react-chartjs-2": "^5.3.1",
     "react-dom": "19.0.0"
   },
   "devDependencies": {
