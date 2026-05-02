@@ -26,7 +26,7 @@ export default function BlogGrid({ children }: BlogGridProps) {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: 'easeOut',
+        ease: [0.0, 0.0, 0.58, 1.0] as const,
       },
     },
   };
