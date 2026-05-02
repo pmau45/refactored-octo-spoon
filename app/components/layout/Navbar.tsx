@@ -51,6 +51,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
       ],
     },
     { href: '/community', label: 'Axiom Cares', accent: 'blue' as const },
+    { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
   ];
 
