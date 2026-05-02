@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import ArticleHero from '../../components/ArticleHero';
-import RelatedPosts from '../../components/RelatedPosts';
-import ArticleNav from '../../components/ArticleNav';
-import { getArticleBySlug, getAllArticles, getRelatedArticles } from '../../utils/mdx-loader';
+import ArticleHero from '../components/ArticleHero';
+import RelatedPosts from '../components/RelatedPosts';
+import ArticleNav from '../components/ArticleNav';
+import { getArticleBySlug, getAllArticles, getRelatedArticles } from '../utils/mdx-loader';
 
 interface ArticlePageProps {
   params: Promise<{
