@@ -192,7 +192,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
 2. Netlify detects changes
 3. Runs build command (configured in netlify.toml)
 4. Deploys to Netlify CDN
-5. Site live at axiomcanine.dev
+5. Site live at axiom-canine.netlify.app
 
 ## Security Measures
 

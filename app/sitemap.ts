@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { getAllArticles } from './blog/utils/mdx-loader';
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ?? 'https://axiomcanine.dev';
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ?? 'https://axiom-canine.netlify.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticles();
