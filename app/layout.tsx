@@ -9,7 +9,7 @@ import ErrorBoundary from './components/ui/ErrorBoundary';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://axiomcanine.dev'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://axiom-canine.netlify.app'),
   title: {
     default: 'Axiom Canine | Professional Dog Training — Jacksonville, FL',
     template: '%s | Axiom Canine',
@@ -70,13 +70,13 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://axiomcanine.dev',
+  '@id': 'https://axiom-canine.netlify.app',
   name: 'Axiom Canine',
   description:
     'Professional dog training in Jacksonville, FL specializing in behavior modification, advanced obedience, and free rescue adjustment support.',
   telephone: '+19044587561',
-  url: 'https://axiomcanine.dev',
-  image: 'https://axiomcanine.dev/og-image.png',
+  url: 'https://axiom-canine.netlify.app',
+  image: 'https://axiom-canine.netlify.app/og-image.png',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Jacksonville',
